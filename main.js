@@ -1,6 +1,6 @@
 function startClassification(){
 navigator.mediaDevices.getUserMedia({audio : true})
-classifier= m15.soundClassfier('model.json',modelReady)
+classifier= ml5.soundClassifier('https://teachablemachine.withgoogle.com/models/qlEvZtXnF/model.json',modelReady)
 }
 function modelReady(){
     classifier.classify( gotResults)
@@ -44,7 +44,7 @@ function gotResults(error, results){
             img.src = 'aliens-01.png';
             img.src = 'aliens-02.png';
             img.src = 'aliens-03.png';
-            img.src = 'aliens-04.png';
+            img.src = 'aliens-04.gif';
     }
 }
 }
